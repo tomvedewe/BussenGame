@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Bussen
+
+  Created by Tom Van der Weeën on 12/08/2021.
+  
+*/
+"wrong" = "Incorrect!";
+
+"drink" = "Drink ";
+
+"sips" = " slokken.";
+
+"note" = "Opgelet";
+
+"tapRules" = "Tik tweemaal op het scherm om een kaart om te draaien.";
