@@ -3,22 +3,22 @@
 "05b-nw-HEQ.text" = "Zet dit voort tot aan de laatste kaart. Wanneer de persoon in de bus bij een van de 6 kaarten fout raadt, moet hij bij elke fout terug naar de eerste kaart en weer vanaf nieuw beginnen met het raden voor hoger of lager.";
 
 /* Class = "UIButton"; normalTitle = "Higher"; ObjectID = "2U6-hA-KxX"; */
-"2U6-hA-KxX.normalTitle" = "Higher";
+"2U6-hA-KxX.normalTitle" = "Hoger";
 
 /* Class = "UIButton"; normalTitle = "Start"; ObjectID = "3gX-Rt-JM4"; */
 "3gX-Rt-JM4.normalTitle" = "Start";
 
 /* Class = "UIButton"; normalTitle = "Outside"; ObjectID = "5Ls-vc-APK"; */
-"5Ls-vc-APK.normalTitle" = "Outside";
+"5Ls-vc-APK.normalTitle" = "Erbuiten";
 
 /* Class = "UIButton"; normalTitle = "Don't have it"; ObjectID = "6A9-6L-kfQ"; */
-"6A9-6L-kfQ.normalTitle" = "Don't have it";
+"6A9-6L-kfQ.normalTitle" = "Heb het nog niet";
 
 /* Class = "UIButton"; normalTitle = "Already have it"; ObjectID = "6RX-Th-RY0"; */
-"6RX-Th-RY0.normalTitle" = "Already have it";
+"6RX-Th-RY0.normalTitle" = "Heb het al";
 
 /* Class = "UIBarButtonItem"; title = "Piramide"; ObjectID = "6eS-7F-Iez"; */
-"6eS-7F-Iez.title" = "Piramide";
+"6eS-7F-Iez.title" = "Volgende";
 
 /* Class = "UILabel"; text = "In de vierde ronde raadt iedereen of je de soort kaart (bijvoorbeeld harten of schoppen) al hebt. Heb je het fout, dan drink je."; ObjectID = "6ne-C1-7tV"; */
 "6ne-C1-7tV.text" = "In de vierde ronde raadt iedereen of je de soort kaart (bijvoorbeeld harten of schoppen) al hebt. Heb je het fout, dan drink je.";
@@ -27,25 +27,25 @@
 "6t4-C1-48D.text" = "Wanneer je de laatste kaart hebt omgedraaid en alle slokken zijn uitgedeeld moet degene met het meeste aantal kaarten de bus in. Zijn er meerdere personen met dezelfde hoeveelheid kaarten? Dan gaat degene met de hoogste waarden in kaarten de bus in.";
 
 /* Class = "UIButton"; normalTitle = "Lower"; ObjectID = "7Ux-2a-01o"; */
-"7Ux-2a-01o.normalTitle" = "Lower";
+"7Ux-2a-01o.normalTitle" = "Lager";
 
 /* Class = "UITextField"; placeholder = "Player name"; ObjectID = "91P-sL-M6n"; */
-"91P-sL-M6n.placeholder" = "Player name";
+"91P-sL-M6n.placeholder" = "Naam speler";
 
 /* Class = "UIButton"; normalTitle = "Red"; ObjectID = "ACG-dZ-oJa"; */
-"ACG-dZ-oJa.normalTitle" = "Red";
+"ACG-dZ-oJa.normalTitle" = "Rood";
 
 /* Class = "UILabel"; text = "Ronde 4"; ObjectID = "Hc5-y2-ORE"; */
 "Hc5-y2-ORE.text" = "Ronde 4";
 
 /* Class = "UIButton"; normalTitle = "Lower"; ObjectID = "Iw0-fq-Wm3"; */
-"Iw0-fq-Wm3.normalTitle" = "Lower";
+"Iw0-fq-Wm3.normalTitle" = "Lager";
 
 /* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "JW2-yU-Gsd"; */
-"JW2-yU-Gsd.title" = "Next";
+"JW2-yU-Gsd.title" = "Volgende";
 
 /* Class = "UIButton"; normalTitle = "Black"; ObjectID = "K1u-15-clb"; */
-"K1u-15-clb.normalTitle" = "Black";
+"K1u-15-clb.normalTitle" = "Zwart";
 
 /* Class = "UILabel"; text = "Ronde 3"; ObjectID = "K8Z-5d-kDy"; */
 "K8Z-5d-kDy.text" = "Ronde 3";
@@ -54,13 +54,13 @@
 "K9l-8X-l4z.text" = "Voldoende drank";
 
 /* Class = "UIBarButtonItem"; title = "Play the bus"; ObjectID = "KER-pY-djI"; */
-"KER-pY-djI.title" = "Play the bus";
+"KER-pY-djI.title" = "Speel de bus";
 
 /* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "Lge-HP-4oL"; */
-"Lge-HP-4oL.title" = "Next";
+"Lge-HP-4oL.title" = "Volgende";
 
 /* Class = "UIButton"; normalTitle = "Higher"; ObjectID = "OHb-mP-9LC"; */
-"OHb-mP-9LC.normalTitle" = "Higher";
+"OHb-mP-9LC.normalTitle" = "Hoger";
 
 /* Class = "UILabel"; text = "Na ronde 1 t/m 4 is het tijd voor de piramide. Leg de kaarten ondersteboven neer in een piramide van 5 hoog. De onderste rij heeft dan 5 kaarten en de bovenste 1."; ObjectID = "Pe0-H0-iMg"; */
 "Pe0-H0-iMg.text" = "Na ronde 1 t/m 4 is het tijd voor de piramide. Leg de kaarten ondersteboven neer in een piramide van 5 hoog. De onderste rij heeft dan 5 kaarten en de bovenste 1.";
@@ -78,7 +78,7 @@
 "WIw-Ia-heA.text" = "De persoon die de bus in moet gaat nu bij de eerste kaart raden of dit een zwarte of rode kaart is.";
 
 /* Class = "UINavigationItem"; title = "Rules"; ObjectID = "Wek-0y-Us7"; */
-"Wek-0y-Us7.title" = "Rules";
+"Wek-0y-Us7.title" = "Regels";
 
 /* Class = "UILabel"; text = "Ronde 2"; ObjectID = "XNG-Ac-R2r"; */
 "XNG-Ac-R2r.text" = "Ronde 2";
@@ -87,13 +87,13 @@
 "Xag-fu-6vc.text" = "Instructies";
 
 /* Class = "UIButton"; normalTitle = "Add"; ObjectID = "Xm0-Yu-7ox"; */
-"Xm0-Yu-7ox.normalTitle" = "Add";
+"Xm0-Yu-7ox.normalTitle" = "Voeg toe";
 
 /* Class = "UILabel"; text = "Heeft hij het fout? Dan moet hij drinken en moet er nog een kaart opgelegd worden waarop hij opnieuw mag raden."; ObjectID = "Zru-LC-XPm"; */
 "Zru-LC-XPm.text" = "Heeft hij het fout? Dan moet hij drinken en moet er nog een kaart opgelegd worden waarop hij opnieuw mag raden.";
 
 /* Class = "UIButton"; normalTitle = "In between"; ObjectID = "a86-Cq-ckB"; */
-"a86-Cq-ckB.normalTitle" = "In between";
+"a86-Cq-ckB.normalTitle" = "Ertussen";
 
 /* Class = "UILabel"; text = "In de tweede ronde moet iedereen raden of zijn kaart hoger of lager is dan de eerste kaart die hij/zij heeft gekregen. Heb je het fout, dan drink je."; ObjectID = "aE9-sk-oyR"; */
 "aE9-sk-oyR.text" = "In de tweede ronde moet iedereen raden of zijn kaart hoger of lager is dan de eerste kaart die hij/zij heeft gekregen. Heb je het fout, dan drink je.";
@@ -111,7 +111,7 @@
 "hkl-74-ZeT.text" = "Omschrijving";
 
 /* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "k4Z-Lm-2Sn"; */
-"k4Z-Lm-2Sn.title" = "Next";
+"k4Z-Lm-2Sn.title" = "Volgende";
 
 /* Class = "UILabel"; text = "Heeft de persoon in de bus voor alle 7 de kaarten de kleur en hoger of lager goed geraden? Dan is hij eindelijk uit de bus en hoeft hij niet meer te drinken. Deze persoon heeft in het volgende potje immuniteit voor de bus."; ObjectID = "mcH-cm-Zpi"; */
 "mcH-cm-Zpi.text" = "Heeft de persoon in de bus voor alle 7 de kaarten de kleur en hoger of lager goed geraden? Dan is hij eindelijk uit de bus en hoeft hij niet meer te drinken. Deze persoon heeft in het volgende potje immuniteit voor de bus.";
@@ -123,10 +123,10 @@
 "siI-2h-x9X.text" = "In de eerste ronde is het de bedoeling dat je raadt of de kaart die je krijgt rood of zwart is. Heb je het fout, dan drink je.";
 
 /* Class = "UINavigationItem"; title = "Add players"; ObjectID = "uij-Xa-36x"; */
-"uij-Xa-36x.title" = "Add players";
+"uij-Xa-36x.title" = "Voeg spelers toe";
 
 /* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "vvU-za-gHs"; */
-"vvU-za-gHs.title" = "Next";
+"vvU-za-gHs.title" = "Volgende";
 
 /* Class = "UILabel"; text = "Draai omstebeurt vanaf onderaan de piramide een kaart om. Wie deze numerieke kaart heeft mag zijn kaart opgooien en een slok uitdelen naar een speler naar keuze. Bij de onderste rij van de piramide mag je één slok weggeven, bij de tweede twee, enzovoorts."; ObjectID = "w2C-je-ewD"; */
 "w2C-je-ewD.text" = "Draai omstebeurt vanaf onderaan de piramide een kaart om. Wie deze numerieke kaart heeft mag zijn kaart opgooien en een slok uitdelen naar een speler naar keuze. Bij de onderste rij van de piramide mag je één slok weggeven, bij de tweede twee, enzovoorts.";
@@ -138,4 +138,6 @@
 "xh2-GJ-hZa.text" = "De bus";
 
 /* Class = "UIButton"; normalTitle = "Rules"; ObjectID = "zw7-sg-gPt"; */
-"zw7-sg-gPt.normalTitle" = "Rules";
+"zw7-sg-gPt.normalTitle" = "Regels";
+
+"YU8-b0-dsu.normalTitle" = "Taal";
