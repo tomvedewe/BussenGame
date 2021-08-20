@@ -15,6 +15,8 @@ class BusViewController: UIViewController {
     var currentCard: Card!
     var drawnCards: [Card] = []
     var playerName: String!
+    @IBOutlet var lowerBtn: UIButton!
+    @IBOutlet var higherBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,14 @@ class BusViewController: UIViewController {
         self.drawnCards.append(self.currentCard)
         UIView.transition(with: self.cards[self.index], duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
         
-        self.index += 1
+        if self.index == self.cards.count - 1 {
+            self.lowerBtn.isHidden = true;
+            self.higherBtn.isHidden = true;
+        }
+        else {
+            self.index += 1
+        }
+        
     }
     
     @IBAction func lower(_ sender: Any) {
@@ -58,7 +67,7 @@ class BusViewController: UIViewController {
                 
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                     
-                    let popup = PopupCorrect(nrOfSips: self.index)
+                    let popup = PopupCorrect(nrOfSips: self.index - 1)
                     self.view.addSubview(popup)
                     
                     self.reset()
@@ -70,7 +79,7 @@ class BusViewController: UIViewController {
                 
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                     
-                    let popup = PopupCorrect(nrOfSips: self.index)
+                    let popup = PopupCorrect(nrOfSips: self.index - 1)
                     self.view.addSubview(popup)
                     
                     self.reset()
@@ -88,6 +97,9 @@ class BusViewController: UIViewController {
         if let first = self.drawnCards.first {
             self.drawnCards = [first]
         }
+        
+        self.lowerBtn.isHidden = false;
+        self.higherBtn.isHidden = false;
     }
     
     @IBAction func home(_ sender: Any) {
