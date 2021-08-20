@@ -1,28 +1,29 @@
 //
-//  PopupCorrect.swift
+//  PopupLoserOfPiramide.swift
 //  Bussen
 //
-//  Created by Tom Van der Weeën on 01/08/2021.
+//  Created by Tom Van der Weeën on 12/08/2021.
 //
 
 import UIKit
 
-class PopupCorrect: UIView {
+class PopupLoserOfPiramide: UIView {
     
-    var nrOfSips: Int!
+    var playerName: String!
     
     private let titleLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.textAlignment = .center
-        label.text = "wrong".localized()
+        label.text = "busTime".localized()
+        label.numberOfLines = 3
         return label
     }()
     
     private let beerImage: UIImageView = {
         let img = UIImageView()
-        img.image = UIImage(named: "toast")
+        img.image = UIImage(named: "bus")
         img.contentMode = .scaleAspectFit
         return img
     }()
@@ -41,7 +42,7 @@ class PopupCorrect: UIView {
     private let container: UIView = {
        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemTeal
+        view.backgroundColor = .magenta
         view.layer.cornerRadius = 24
         return view
     }()
@@ -65,21 +66,15 @@ class PopupCorrect: UIView {
         })
     }
     
-    init(nrOfSips: Int) {
-        self.nrOfSips = nrOfSips
+    init(playerName: String) {
+        self.playerName = playerName
         super.init(frame: CGRect.zero)
         
         self.subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.subTitleLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         self.subTitleLabel.textAlignment = .center
-        self.subTitleLabel.numberOfLines = 2
-        
-        var sips: String = "sips".localized()
-        if self.nrOfSips == 1 {
-            sips = "sip".localized()
-        }
-        
-        self.subTitleLabel.text = "drink".localized() + String(self.nrOfSips) + sips
+        self.subTitleLabel.numberOfLines = 4
+        self.subTitleLabel.text = String(self.playerName) + "playTheBus".localized()
         //self.subTitleLabel.text = "U moet \(String(describing: nrOfSips)) slokken nemen"
         
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(animateOut)))

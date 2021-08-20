@@ -15,7 +15,7 @@ class SameTypeCollectionViewController: UICollectionViewController {
     var currentPlayer: Player!
     var card: Card!
     var index: Int = 0
-    var deck = Deck()
+    var deck: Deck!
     var cardToShow: UIImageView!
     @IBOutlet var haveButton: UIButton!
     @IBOutlet var haveNotButton: UIButton!
@@ -124,6 +124,7 @@ class SameTypeCollectionViewController: UICollectionViewController {
         if segue.destination is PiramideViewController {
             let vc = segue.destination as? PiramideViewController
             vc?.players = self.players
+            vc?.deck = self.deck
         }
     }
 }

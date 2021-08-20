@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Player {
+struct Player: Equatable {
     let id = UUID()
     var name: String
     var cards: [Card]
@@ -27,13 +27,24 @@ struct Player {
         }
         return nil
     }
+    
+    mutating func removeCardFromPlayer(card: Card) {
+        if let index = cards.firstIndex(of: card) {
+            cards.remove(at: index)
+        }
+    }
 }
 
-struct Card {
+struct Card: Equatable {
+    let id = UUID()
     let value: Int
     let color: Character
     let image: UIImage
     let suit: Character
+    
+    static func ==(lhs: Card, rhs: Card) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     func flip(front: UIImage, back: UIImage) {
         let transitionOptions = UIView.AnimationOptions.transitionFlipFromLeft

@@ -13,12 +13,18 @@ class PiramideViewController: UIViewController {
     @IBOutlet var cards: [UIImageView]!
     var index: Int = 0
     var card: Card!
-    var deck = Deck()
+    var deck: Deck!
+    var tapGestureRecognizer: UITapGestureRecognizer!
+    @IBOutlet var nextBtn: UIBarButtonItem!
+    var loser: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        nextBtn.isEnabled = false
+        nextBtn.title = nil
         showAlert()
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(turnCard))
+        self.tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(turnCard))
         tapGestureRecognizer.numberOfTapsRequired = 2
         self.view.addGestureRecognizer(tapGestureRecognizer)
     }
@@ -48,7 +54,7 @@ class PiramideViewController: UIViewController {
         for player in self.players {
             let c = player.checkCards(card: cardToCheck)
             if c != nil {
-                showPlayerCard(playerCard: c!, playerName: player.name)
+                showPlayerCard(playerCard: c!, currentPlayer: player)
             }
         }
     }
@@ -57,28 +63,89 @@ class PiramideViewController: UIViewController {
         if index < self.cards.count - 1 {
             index += 1
         }
+        else {
+            self.tapGestureRecognizer.isEnabled = false
+            self.loser = getPlayerWithLeastCards().name
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                let popup = PopupLoserOfPiramide(playerName: self.loser)
+                self.view.addSubview(popup)
+            }
+            
+            nextBtn.isEnabled = true
+            nextBtn.title = "playBus".localized()
+        }
     }
     
-    func showPlayerCard(playerCard: Card, playerName: String) {
-        let alert = UIAlertController(title: playerName, message: "Afleggen?", preferredStyle: .alert)
+    func showPlayerCard(playerCard: Card, currentPlayer: Player) {
+        let alert = UIAlertController(title: currentPlayer.name, message: "layCard".localized(), preferredStyle: .alert)
         
-        let yesAction = UIAlertAction(title: "YES", style: .default, handler: nil)
-        let noAction = UIAlertAction(title: "NO", style: .cancel, handler: nil)
+        let noAction = UIAlertAction(title: "keep".localized(), style: .cancel, handler: nil)
 
-        //Add imageview to alert
-        let imgViewTitle = UIImageView(frame: CGRect(x: 10, y: 80, width: 100, height: 170))
-        imgViewTitle.image = playerCard.image
-        imgViewTitle.layer.borderWidth = 2
-        imgViewTitle.layer.borderColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0).cgColor
-        alert.view.addSubview(imgViewTitle)
+        for i in 0..<currentPlayer.cards.count {
+            let imgViewTitle: UIImageView!
+            switch i {
+            case 0:
+                imgViewTitle = UIImageView(frame: CGRect(x: 15, y: 85, width: 100, height: 170))
+            case 1:
+                imgViewTitle = UIImageView(frame: CGRect(x: 145, y: 85, width: 100, height: 170))
+            case 2:
+                imgViewTitle = UIImageView(frame: CGRect(x: 15, y: 260, width: 100, height: 170))
+            case 3:
+                imgViewTitle = UIImageView(frame: CGRect(x: 145, y: 260, width: 100, height: 170))
+            default:
+                imgViewTitle = UIImageView(frame: CGRect(x: 15, y: 85, width: 100, height: 170))
+            }
+            //Add imageview to alert
+            imgViewTitle.image = currentPlayer.cards[i].image
+            if currentPlayer.cards[i] == playerCard {
+                imgViewTitle.layer.borderWidth = 3
+                imgViewTitle.layer.borderColor = UIColor(red: 1, green: 1, blue: 0, alpha: 1.0).cgColor
+            }
+            
+            alert.view.addSubview(imgViewTitle)
+        }
         
-        let height = NSLayoutConstraint(item: alert.view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 320)
+        let height = NSLayoutConstraint(item: alert.view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: self.view.frame.height - 20)
         let width = NSLayoutConstraint(item: alert.view as Any, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 250)
         alert.view.addConstraint(height)
         alert.view.addConstraint(width)
+        
+        for player in self.players {
+            if player != currentPlayer {
+                let action = UIAlertAction(title: player.name, style: .default, handler: { action in
+                    if let index = self.players.firstIndex(of: currentPlayer) {
+                        self.players[index].removeCardFromPlayer(card: playerCard)
+                        print(self.players[index].cards.count)
+                    }
+                })
+                alert.addAction(action)
+            }
+        }
 
-        alert.addAction(yesAction)
         alert.addAction(noAction)
-        self.present(alert, animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.7) {
+            self.present(alert, animated: true, completion: nil)
+        }
+       
     }
+    
+    func getPlayerWithLeastCards() -> Player {
+        _ = self.players.sorted(by: { $0.cards.count < $1.cards.count })
+        
+        return self.players[0]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.destination is BusViewController {
+            let vc = segue.destination as? BusViewController
+            vc?.playerName = self.loser
+            
+        }
+    }
+    
+    @IBAction func playBus(_ sender: Any) {
+        performSegue(withIdentifier: "Bus", sender: nil)
+    }
+    
 }

@@ -28,6 +28,7 @@
 		097B4E1226C5ABC60064D157 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 097B4E1426C5ABC60064D157 /* Localizable.strings */; };
 		097B4E1D26CD87080064D157 /* PiramideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B4E1C26CD87080064D157 /* PiramideViewController.swift */; };
 		097B4E1F26CED8960064D157 /* PlayerHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B4E1E26CED8960064D157 /* PlayerHand.swift */; };
+		097B4E2126D010C50064D157 /* PopupLoserOfPiramide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B4E2026D010C40064D157 /* PopupLoserOfPiramide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		097B4E1526C5ABDE0064D157 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		097B4E1C26CD87080064D157 /* PiramideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiramideViewController.swift; sourceTree = "<group>"; };
 		097B4E1E26CED8960064D157 /* PlayerHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHand.swift; sourceTree = "<group>"; };
+		097B4E2026D010C40064D157 /* PopupLoserOfPiramide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupLoserOfPiramide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			children = (
 				097B4DFB26B6E4AC0064D157 /* PopupCorrect.swift */,
 				097B4E1E26CED8960064D157 /* PlayerHand.swift */,
+				097B4E2026D010C40064D157 /* PopupLoserOfPiramide.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				097B4DF226B078620064D157 /* SelectColorViewController.swift in Sources */,
 				097B4DF626B07A000064D157 /* BetweenViewController.swift in Sources */,
 				097B4E0E26C5A6B80064D157 /* HomeViewController.swift in Sources */,
+				097B4E2126D010C50064D157 /* PopupLoserOfPiramide.swift in Sources */,
 				097B4E0626C026430064D157 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

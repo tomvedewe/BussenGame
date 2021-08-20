@@ -14,9 +14,13 @@ class BusViewController: UIViewController {
     var deck = Deck()
     var currentCard: Card!
     var drawnCards: [Card] = []
+    var playerName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        
+        self.title = playerName
         deck.shuffleCards()
         setUi()
     }
@@ -53,11 +57,11 @@ class BusViewController: UIViewController {
             if self.drawnCards[size-1].value <= self.drawnCards[size-2].value {
                 
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                    self.reset()
                     
                     let popup = PopupCorrect(nrOfSips: self.index)
-                    popup.nrOfSips = self.index
                     self.view.addSubview(popup)
+                    
+                    self.reset()
                 }
             }
         }
@@ -65,11 +69,11 @@ class BusViewController: UIViewController {
             if self.drawnCards[size-1].value >= self.drawnCards[size-2].value {
                 
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                    self.reset()
                     
                     let popup = PopupCorrect(nrOfSips: self.index)
-                    popup.nrOfSips = self.index
                     self.view.addSubview(popup)
+                    
+                    self.reset()
                 }
             }
         }
@@ -85,4 +89,9 @@ class BusViewController: UIViewController {
             self.drawnCards = [first]
         }
     }
+    
+    @IBAction func home(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 }

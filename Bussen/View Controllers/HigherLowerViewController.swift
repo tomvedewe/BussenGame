@@ -14,7 +14,7 @@ class HigherLowerViewController: UIViewController {
     var currentPlayer: Player!
     var card: Card!
     var index: Int = 0
-    var deck = Deck()
+    var deck: Deck!
     @IBOutlet var cardImage: UIImageView!
     @IBOutlet var cardToShow: UIImageView!
     @IBOutlet var lowerButton: UIButton!
@@ -58,6 +58,7 @@ class HigherLowerViewController: UIViewController {
         if segue.destination is BetweenViewController {
             let vc = segue.destination as? BetweenViewController
             vc?.players = self.players
+            vc?.deck = self.deck
         }
     }
     

@@ -57,6 +57,7 @@ class SelectColorViewController: UIViewController {
         if segue.destination is HigherLowerViewController {
             let vc = segue.destination as? HigherLowerViewController
             vc?.players = self.players
+            vc?.deck = self.deck
         }
     }
     

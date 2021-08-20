@@ -14,7 +14,7 @@ class BetweenViewController: UIViewController {
     var currentPlayer: Player!
     var card: Card!
     var index: Int = 0
-    var deck = Deck()
+    var deck: Deck!
     @IBOutlet var card1: UIImageView!
     @IBOutlet var card2: UIImageView!
     @IBOutlet var cardToShow: UIImageView!
@@ -105,6 +105,7 @@ class BetweenViewController: UIViewController {
         if segue.destination is SameTypeCollectionViewController {
             let vc = segue.destination as? SameTypeCollectionViewController
             vc?.players = self.players
+            vc?.deck = self.deck
         }
     }
 }

@@ -11,6 +11,18 @@
 
 "sips" = " sips.";
 
+"sip" = " sip.";
+
 "note" = "Attention";
 
 "tapRules" = "Tap the screen twice to turn a card.";
+
+"busTime" = "Time to play the bus!";
+
+"playTheBus" = ", you still have the most cards so you have to play the bus.";
+
+"playBus" = "Play the bus";
+
+"layCard" = "If you want to play your card, select a player that has to drink.";
+
+"keep" = "Keep card";

@@ -11,6 +11,18 @@
 
 "sips" = " slokken.";
 
+"sip" = " slok.";
+
 "note" = "Opgelet";
 
 "tapRules" = "Tik tweemaal op het scherm om een kaart om te draaien.";
+
+"busTime" = "Tijd om de bus te spelen!";
+
+"playTheBus" = ", jij hebt nog de meeste kaarten in je hand en moet dus op de bus zitten.";
+
+"playBus" = "Speel de bus";
+
+"layCard" = "Indien u wil afleggen, selecteer dan een speler die moet drinken.";
+
+"keep" = "Kaart bijhouden";
