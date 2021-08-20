@@ -12,7 +12,6 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Bussen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -69,6 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="dYd-0z-WcW"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
         </scene>
@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1q-4b-nkG">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <rect key="frame" x="20" y="140" width="374" height="722"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nxk-tT-L9R">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="2076.5"/>
@@ -637,7 +637,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rc4-NP-ZZG">
-                                <rect key="frame" x="20" y="170" width="374" height="345.5"/>
+                                <rect key="frame" x="20" y="170" width="374" height="612"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Oe-Pr-a8Q">
                                         <rect key="frame" x="0.0" y="0.0" width="577" height="370"/>
@@ -671,16 +671,15 @@
                                     <constraint firstItem="3Oe-Pr-a8Q" firstAttribute="bottom" secondItem="GRp-nu-M3V" secondAttribute="bottom" id="Az2-y3-cQd"/>
                                     <constraint firstItem="3Oe-Pr-a8Q" firstAttribute="trailing" secondItem="GRp-nu-M3V" secondAttribute="trailing" id="EM1-cD-aBE"/>
                                     <constraint firstItem="3Oe-Pr-a8Q" firstAttribute="leading" secondItem="GRp-nu-M3V" secondAttribute="leading" id="PQT-xn-vVC"/>
-                                    <constraint firstItem="3Oe-Pr-a8Q" firstAttribute="height" secondItem="VW4-Cn-pOk" secondAttribute="height" multiplier="1.07027" id="b3K-al-MrT"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="GRp-nu-M3V"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="VW4-Cn-pOk"/>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="98" translatesAutoresizingMaskIntoConstraints="NO" id="jEO-Ev-8JE">
-                                <rect key="frame" x="20" y="615.5" width="374" height="220.5"/>
+                                <rect key="frame" x="20" y="802" width="374" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a86-Cq-ckB">
-                                        <rect key="frame" x="0.0" y="190.5" width="138" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <state key="normal" title="In between">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -690,7 +689,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-vc-APK">
-                                        <rect key="frame" x="236" y="190.5" width="138" height="30"/>
+                                        <rect key="frame" x="236" y="0.0" width="138" height="30"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <state key="normal" title="Outside">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -707,11 +706,11 @@
                         <constraints>
                             <constraint firstItem="jEO-Ev-8JE" firstAttribute="leading" secondItem="oDi-xV-Iex" secondAttribute="leading" constant="20" id="3IK-63-9ZQ"/>
                             <constraint firstItem="oDi-xV-Iex" firstAttribute="trailing" secondItem="Rc4-NP-ZZG" secondAttribute="trailing" constant="20" id="BrI-4B-5V6"/>
+                            <constraint firstItem="jEO-Ev-8JE" firstAttribute="top" secondItem="Rc4-NP-ZZG" secondAttribute="bottom" constant="20" id="KCg-Z2-9qe"/>
+                            <constraint firstItem="oDi-xV-Iex" firstAttribute="bottom" secondItem="jEO-Ev-8JE" secondAttribute="bottom" constant="30" id="NY4-ch-SMS"/>
                             <constraint firstItem="Rc4-NP-ZZG" firstAttribute="leading" secondItem="oDi-xV-Iex" secondAttribute="leading" constant="20" id="Rqw-ZT-lUX"/>
                             <constraint firstItem="Rc4-NP-ZZG" firstAttribute="top" secondItem="oDi-xV-Iex" secondAttribute="top" constant="30" id="anU-eb-Nor"/>
-                            <constraint firstItem="jEO-Ev-8JE" firstAttribute="top" secondItem="Rc4-NP-ZZG" secondAttribute="bottom" constant="100" id="eVk-Ra-8gK"/>
                             <constraint firstItem="oDi-xV-Iex" firstAttribute="trailing" secondItem="jEO-Ev-8JE" secondAttribute="trailing" constant="20" id="il3-hB-kcR"/>
-                            <constraint firstAttribute="bottom" secondItem="jEO-Ev-8JE" secondAttribute="bottom" constant="60" id="lbq-gC-NYb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LIx-lN-8wz">
@@ -1253,7 +1252,6 @@
         <!--Navigation Controller-->
         <scene sceneID="oG1-t4-1KT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q6a-h1-NQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MI4-hc-nsE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Qqa-TK-t6c">
@@ -1265,6 +1263,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Vp-iQ-h5F"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6a-h1-NQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
