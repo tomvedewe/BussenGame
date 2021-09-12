@@ -98,8 +98,8 @@ class BusViewController: UIViewController {
             self.drawnCards = [first]
         }
         
-        self.lowerBtn.isHidden = false;
-        self.higherBtn.isHidden = false;
+        //self.lowerBtn.isHidden = false;
+        //self.higherBtn.isHidden = false;
     }
     
     @IBAction func home(_ sender: Any) {
