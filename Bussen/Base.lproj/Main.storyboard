@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MI4-hc-nsE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MI4-hc-nsE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -1236,6 +1237,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="higherBtn" destination="2U6-hA-KxX" id="cKx-pN-DUj"/>
+                        <outlet property="lowerBtn" destination="7Ux-2a-01o" id="LHx-gf-Dxb"/>
                         <outletCollection property="cards" destination="ahk-Dg-lQd" collectionClass="NSMutableArray" id="0Pp-Wi-PeG"/>
                         <outletCollection property="cards" destination="P4B-cq-poT" collectionClass="NSMutableArray" id="LlZ-Oj-3qF"/>
                         <outletCollection property="cards" destination="DJb-Vp-leS" collectionClass="NSMutableArray" id="zjZ-0y-unn"/>
